@@ -3,7 +3,8 @@
 ssh app@10.0.2.7 <<EOF
   cd /home/Thiru/code/jenkinstest
   git pull
+  forever stopall
   npm install --production
-  forever restartall
+  forever start app.js
   exit
 EOF
