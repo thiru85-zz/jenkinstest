@@ -1,0 +1,9 @@
+#!/bin/sh
+ 
+ssh app@10.0.2.7 <<EOF
+  cd /home/Thiru/code/jenkinstest
+  git pull
+  npm install --production
+  forever restartall
+  exit
+EOF
