@@ -1,6 +1,6 @@
 #!/bin/sh
  
-ssh app@10.0.2.7 <<EOF
+ssh app@10.0.2.6 <<EOF
   cd /home/Thiru/code/jenkinstest
   git pull
   forever stopall
