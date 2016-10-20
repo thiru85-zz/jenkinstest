@@ -1,9 +1,17 @@
 #!/bin/sh
  
 ssh app@10.0.2.6 <<EOF
+<<<<<<< HEAD
   cd /home/thiru/jenkinstest
   sudo git pull
   npm install --production
   forever restartall
+=======
+  cd /home/Thiru/code/jenkinstest
+  git pull
+  forever stopall
+  npm install --production
+  forever start app.js
+>>>>>>> 50541d0add5a3337a8e2525a79247626e651a381
   exit
 EOF
